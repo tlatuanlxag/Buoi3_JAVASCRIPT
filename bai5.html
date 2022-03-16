@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Bài 5</title>
+		<meta charset="utf-8" />
+	</head>
+	<body>
+		<div id = "kqHienThi"></div>
+		<script>
+			function ThoiGian()
+			{
+				var ht = new Date();
+				
+				var gio = ht.getHours();
+				var phut = ht.getMinutes();
+				var giay = ht.getSeconds();
+				
+				//document.wrire('Bây giờ là ' + gio + ':' + phut + ':' +giay);
+				document.getElementById('kqHienThi').innerHTML = 'Bây giờ là ' + gio + ':' + phut + ':' + giay ; 
+				setTimeout(ThoiGian, 1000);
+			}
+			ThoiGian();
+		</script>
+	</body>
+</html>
